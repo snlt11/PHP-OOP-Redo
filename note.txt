@@ -1,0 +1,54 @@
+Access Modifier
+
+public
+// can access this variable from outside the class
+
+private
+// can not access this variable from outside the class (Encapsulation)
+
+protected
+// can only access this variable from inside the class and its child class
+
+$this-> pointer to the object making function call
+
+**Inheritance**
+When we have the same properties in different classes, we don't want to rewrite them. Instead, we use inheritance(extends).
+For example, suppose a Member has properties like name, age, and address, as well as methods. 
+A DiamondMember also has the same properties. In this case, we set Member as the parent class and DiamondMember as the child class.
+Class can override the properties and methods of the parent class.
+
+Parent Constructor Invoking
+    parent::__construct();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
