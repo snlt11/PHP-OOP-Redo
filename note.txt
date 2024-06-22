@@ -23,9 +23,6 @@ A DiamondMember also has the same properties.
 In this case, we set Member as the parent class and DiamondMember as the child class.
 Class can override the properties and methods of the parent class.
 
-Parent Constructor Invoking
-    parent::__construct();
-
 **Traits**
 In PHP, a class can extend only one other class due to single inheritance.
 However, if you want to use functionality from multiple classes, you can use traits.
@@ -34,22 +31,57 @@ Special Members can access all the functionality of the three member types.
 Since a class can only extend one class, we cannot have all three member types extend the Special Member class. 
 This is where we use traits.
 
+**Interface**
+We have an application that needs to handle different payment methods like credit cards, PayPal, and bank transfers. 
+Each payment method requires the same actions: depositMoney(), withdrawMoney(), transferMoney() and refundPayment().
+To ensure all payment methods are managed consistently, 
+we define an 'interface' that enforces these actions for all payment method classes.
+// Create an 'interface' and use it with the 'implements' keyword. 
+When we use implements, we need to rewrite all the methods in the class.
+
 Magic Methods
 
-__get
+Parent Constructor Invoking
+    parent::__construct();
+
+__get:
 Used when we are trying to access non-existing properties.
 
-__set
+__set:
 Used when we are trying to set non-existing properties.
 
-__isset
+__isset:
 Used when we are trying to check if a non-existing property is set.
 
-__unset
+__unset:
 Used when we are trying to unset a non-existing property.
 
-__call
+__call:
 Used when we are trying to call a non-existing method.
 
-__callStatic
+__callStatic:
 Used when we are trying to call a non-existing static method.
+
+Serialization:
+Serialize the object or array using serialize(), which converts it into a string. 
+This string can then be stored in a database, cached, or transmitted.
+
+__sleep:
+This method is used when we are trying to serialize an object. 
+
+Unserialization:
+Unserialize the string back into an object or array using unserialize(), 
+
+__wakeup:
+This method is used when we are trying to unserialize an object. 
+
+__toString:
+This method is used when we want to automatically convert a Class object into a string, 
+typically for cases where we use 'echo' or 'print' with an instance of the class.
+
+__invoke:
+This method is used when we want to treat a class object as a function.
+
+__clone:
+This method is used when we clone an object of a class to create another instance. 
+The __clone magic method is invoked automatically during the cloning process.
