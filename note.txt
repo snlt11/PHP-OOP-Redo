@@ -39,6 +39,25 @@ we define an 'interface' that enforces these actions for all payment method clas
 // Create an 'interface' and use it with the 'implements' keyword. 
 When we use implements, we need to rewrite all the methods in the class.
 
+**Static and Non-Static Methods**
+Static Methods: Cannot call non-static 'method' & 'variables' directly.
+Non-Static Methods: Can call static methods.
+
+**Data Binding**
+// Compile  ==  Early Binding   ==  Dynamic Binding
+index.php => Compile => Execution => Early Binding
+Compilation is the process of converting code written in a high-level programming language into machine code 
+that a computer's processor can execute directly.
+
+//Transpile   ==  Late Binding    ==  Late Static Binding
+index.php => Transpile => Execution => Late Binding
+Transpilation is the process of converting code from one high-level programming language 
+to another high-level programming language.
+
+$this 
+// self:: refers to the class in which it is used at the time of definition, not at runtime.
+// static:: refers to the class in which it is called, even if it's inherited and called in a subclass.
+
 Magic Methods
 
 Parent Constructor Invoking
