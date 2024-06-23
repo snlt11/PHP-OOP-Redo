@@ -38,6 +38,19 @@ To ensure all payment methods are managed consistently,
 we define an 'interface' that enforces these actions for all payment method classes.
 // Create an 'interface' and use it with the 'implements' keyword. 
 When we use implements, we need to rewrite all the methods in the class.
+We cannot create variables (properties) in an interface but can create Concrete(constants (`const`)).
+
+Difference between Interface & Abstract
+
+**Abstract Methods**
+The 'Methods' and the 'Class' must be declared as abstract.
+Abstract methods do not have a body.
+If a subclass 'extends' an abstract class, it must override and provide implementations for all abstract methods.
+A class can only 'extends' one 'Abstract' class
+
+// Payment processing system that supports different types of payments like 
+    credit cards, PayPal, and bank transfers. Each payment type has its own way of processing payments, 
+    but they share some common functionality.
 
 **Static and Non-Static Methods**
 Static Methods: Cannot call non-static 'method' & 'variables' directly.
@@ -95,12 +108,12 @@ __wakeup:
 This method is used when we are trying to unserialize an object. 
 
 __toString:
-This method is used when we want to automatically convert a Class object into a string, 
+This method is used when we want to automatically convert a 'Class' object into a string, 
 typically for cases where we use 'echo' or 'print' with an instance of the class.
 
 __invoke:
 This method is used when we want to treat a class object as a function.
 
 __clone:
-This method is used when we clone an object of a class to create another instance. 
+This method is used when we clone an object of a class to create another instance.
 The __clone magic method is invoked automatically during the cloning process.
