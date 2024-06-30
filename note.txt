@@ -133,3 +133,8 @@ Closure function can access global variable by using use($value)
 
 variadic (...)
 coalesce (??)
+
+Polymorphism
+Polymorphism allows objects of different classes to respond differently to the same message.
+Use interfaces or abstract classes to implement polymorphism in PHP.
+
