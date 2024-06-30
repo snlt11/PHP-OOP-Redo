@@ -117,3 +117,19 @@ This method is used when we want to treat a class object as a function.
 __clone:
 This method is used when we clone an object of a class to create another instance.
 The __clone magic method is invoked automatically during the cloning process.
+
+Checking Variable Types
+
+is_int()
+is_bool()
+is_string()
+is_null()
+is_float()
+
+Function
+Anonymous function
+Lambda function
+Closure function can access global variable by using use($value)
+
+variadic (...)
+coalesce (??)
