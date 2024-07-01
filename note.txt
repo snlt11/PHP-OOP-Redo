@@ -138,3 +138,5 @@ Polymorphism
 Polymorphism allows objects of different classes to respond differently to the same message.
 Use interfaces or abstract classes to implement polymorphism in PHP.
 
+//Don't forget to run Autoload
+composer dump-autoload -o
